@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="REPORTEPROVEEDORES" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="07498327-3a12-47a9-a1f3-9075426135f0">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[CALL sp_mostrarproveedor ()]]>
+	</queryString>
+	<field name="codigoproveedor" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nitproveedor" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreproveedor" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellidosproveedor" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccionproveedor" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="razonsocial" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="contactoprincipal" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="paginaweb" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="802" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="555" height="802" uuid="99ab0358-9df4-40bd-81e4-b1f592650cfe"/>
+				<imageExpression><![CDATA["C:\\Users\\Informatica\\Desktop\\XMARCSMiniSupermarket\\src\\org\\marcobolaños\\images\\REPORTE PROVEEDORES.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="375" y="706" width="360" height="78" uuid="74aa95b6-5f16-47c0-b42c-5338dd66eacd"/>
+				<imageExpression><![CDATA["C:\\Users\\Informatica\\Desktop\\XMARCSMiniSupermarket\\src\\org\\marcobolaños\\images\\FIRMA DIGITAL.png"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="67" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="72" splitType="Stretch">
+			<rectangle>
+				<reportElement x="24" y="2" width="487" height="22" forecolor="#CCCCCC" backcolor="#CCCCCC" uuid="e0148443-1766-43a3-9b83-35e13f66d8b0"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="24" y="2" width="100" height="20" uuid="1ad7fc89-0a44-4167-9ae1-cd187bb4813f"/>
+				<text><![CDATA[nitproveedor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="148" y="2" width="100" height="20" uuid="8552b0f6-541b-4deb-b5c0-e965db9310ef"/>
+				<text><![CDATA[nombreproveedor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="285" y="0" width="100" height="20" uuid="45e22ba7-f439-4f35-8d09-8742311ba0a1"/>
+				<text><![CDATA[apellidosproveedor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="411" y="0" width="100" height="20" uuid="1eed6cc8-11e6-4186-8236-7b52c04fa6d5"/>
+				<text><![CDATA[direccionproveedor]]></text>
+			</staticText>
+			<line>
+				<reportElement x="24" y="33" width="100" height="1" forecolor="#33FF00" uuid="4ece64f8-4501-4654-a5ce-b8dcbb657983"/>
+			</line>
+			<line>
+				<reportElement x="148" y="33" width="100" height="1" forecolor="#33FF00" uuid="20ea739b-4169-4e07-843d-6a7a66fd28ad"/>
+			</line>
+			<line>
+				<reportElement x="285" y="32" width="100" height="1" forecolor="#33FF00" uuid="c33da54e-4610-431e-866e-2a085e11aa0a"/>
+			</line>
+			<line>
+				<reportElement x="411" y="31" width="100" height="1" forecolor="#33FF00" uuid="8a08b42b-cf5e-483a-a38e-96fd6b96bafc"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="83" splitType="Stretch">
+			<rectangle>
+				<reportElement x="24" y="0" width="497" height="20" forecolor="#FFFFFF" uuid="b372ac8b-5acd-41f2-ae76-96225579dba5"/>
+			</rectangle>
+			<textField>
+				<reportElement x="24" y="0" width="100" height="20" uuid="16d7bec6-ceb3-4725-ac7a-b3c1a34d5d04"/>
+				<textFieldExpression><![CDATA[$F{nitproveedor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="148" y="0" width="100" height="20" uuid="89444265-d5be-4a05-ada7-b5ee2a6dac05"/>
+				<textFieldExpression><![CDATA[$F{nombreproveedor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="285" y="0" width="100" height="20" uuid="2be3db6b-0f73-4a92-b10d-233af4c31117"/>
+				<textFieldExpression><![CDATA[$F{apellidosproveedor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="421" y="0" width="100" height="20" uuid="1dd3c6f9-5789-4edf-b8c6-ae5a739d51b9"/>
+				<textFieldExpression><![CDATA[$F{direccionproveedor}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="24" y="31" width="100" height="1" forecolor="#33FF00" uuid="226bbe18-9df8-4cdf-8539-ae30469a9ff0"/>
+			</line>
+			<line>
+				<reportElement x="148" y="32" width="100" height="1" forecolor="#33FF00" uuid="22272108-1597-4a40-97e9-7ace8289ec41"/>
+			</line>
+			<line>
+				<reportElement x="285" y="30" width="100" height="1" forecolor="#33FF00" uuid="c07a2f3d-f286-4107-9ef1-2f3975946ca9"/>
+			</line>
+			<line>
+				<reportElement x="421" y="30" width="100" height="1" forecolor="#33FF00" uuid="407a0527-3b8e-4e8b-84dd-373cdb9fbc8c"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
